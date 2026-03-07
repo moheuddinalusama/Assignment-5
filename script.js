@@ -36,8 +36,11 @@ async function displayIssues(issues){
 const cardContainer = document.getElementById("card-container");
 cardContainer.innerHTML=''
 issues.forEach(data => {
-    const card = document.createElement("div")
 
+const statusImage = data.status === 'open' ? "./images/Open-Status.png" : "./images/Closed- Status .png";
+
+    const card = document.createElement("div")
+const statusBorder = data.status === 'open' ? 'border-t-green-500' : 'border-t-[#A855F7]';
 
     const priorityClass = 
             data.priority === 'high' ? 'bg-red-100 text-red-600': 
@@ -46,9 +49,9 @@ issues.forEach(data => {
 
 
     card.innerHTML=`
-            <div class="card space-y-3 p-4 shadow rounded bg-orange-100 h-full flex flex-col justify-between">
+            <div class="card space-y-3 p-4 shadow rounded bg-orange-100 border-t-4 ${statusBorder} h-full flex flex-col justify-between">
                 <div class="flex justify-between items-center">
-                    <img src="./images/Open-Status.png" alt="Status">
+                    <img src="${statusImage}" alt="${data.status}">
                     <p  class="${priorityClass} flex rounded-full px-6 py-1.5  font-bold uppercase text-xs">
                         ${data.priority}
                     </p>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Issues Tracker</title>
+    <!-- font wasome link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- favicon -->
      <link rel="shortcut icon" href="./images/unnamed.png" type="image/x-icon">
     <!-- daisyui and tailwind link -->
@@ -19,8 +21,92 @@
     }
 </style>
 </head>
-<body class="bg-gray-100">
+<body class="">
    
-    <p>hello slouytbk </p>
+<nav>
+    <div class="navbar bg-base-100 shadow-sm flex justify-between items-center ">
+ 
+    <div class="flex items-center gap-3" >
+    <img class="w-11" src="./images/github-logo.png" alt="">
+    <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
+  </div>
+
+  <div class="flex">
+   <div class="relative w-64"> <input type="text" placeholder="   Search issues..." class="input input-bordered w-24 md:w-auto" />
+<i class="fa-brands fa-sistrix  absolute left-1 top-3"></i>
+</div>
+    <button class="btn btn-primary">+New Issue</button>
+  </div>
+ 
+</div>
+</nav>
+
+<main>
+    <!-- button section -->
+<section class="w-10/12 mx-auto">
+<div class="filter-buttons mt-12 mb-4 shadow p-4">
+     <button onclick="filterIssues('all')" class="btn btn-primary px-10">All</button>
+    <button onclick="filterIssues('open')" class="btn btn-soft" >Open</button>
+    <button onclick="filterIssues('closed')" class="btn btn-soft">Closed</button>
+</div>
+
+
+<div class=" flex justify-between items-center my-8 p-6 bg-blue-100">
+<div class="flex items-center gap-2">
+    <div class="">
+        <img src="./images/Aperture.png" alt="">       
+    </div>
+    <div class=""><h4 class="text-xl font-bold">50 Issues</h4>
+    <p class="text-gray-500">Track and manage your project issues</p></div>
+</div>
+    <div class="flex items-center gap-3">
+        <div class="bg-green-700 rounded-full w-4 h-4"></div>
+        <p>Open</p>
+        <div class="bg-[#A855F7] rounded-full w-4 h-4"></div>
+        <p>Closed</p>
+    </div>
+</div>
+
+
+<section id="card-container" class="grid grid-cols-4 gap-3">
+
+
+    <div class="card space-y-6 p-2 shadow rounded bg-amber-100">
+   <div class=" flex justify-between items-center">
+    <img src="./images/Open-Status.png" alt="">
+    <p class="bg-red-200 rounded-full px-6 py-1.5 text-red-600">High</p>
+   </div>
+<div class="">
+    <h3>Fix navigation menu on mobile devices</h3>
+    <p>The navigation menu doesn't collapse properly on mobile devices</p>
+
+</div>
+<div class="flex items-center gap-3">
+    <h4 class="bg-red-100 border-2 border-red-400 text-red-600 px-4  py-1 rounded-full"><i class="fa-solid fa-bug"></i> Bug</h4>
+    <h4 class="bg-yellow-100 border-2 border-yellow-400 text-yellow-600 px-4  py-1 rounded-full"><i class="fa-solid fa-life-ring"></i> help wanted</h4>
+</div>
+<hr class="border border-gray-300">
+
+<div class="space-y-2">
+    <p>#1 by john_doe</p>
+    <p>1/15/2024</p>
+</div>
+
+
+    </div>
+
+
+
+
+    
+</section>
+
+</section>
+
+
+
+
+</main>
+    
 </body>
 </html>

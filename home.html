@@ -44,10 +44,10 @@
 <main>
     <!-- button section -->
 <section class="w-10/12 mx-auto">
-<div class="filter-buttons mt-12 mb-4 shadow p-4">
-     <button onclick="filterIssues('all')" class="btn btn-primary px-10">All</button>
-    <button onclick="filterIssues('open')" class="btn btn-soft" >Open</button>
-    <button onclick="filterIssues('closed')" class="btn btn-soft">Closed</button>
+<div id="filter-buttons" class="filter-buttons mt-12 mb-4 shadow p-4">
+     <button onclick="filterIssues('all',event)" class="btn btn-primary px-10">All</button>
+    <button onclick="filterIssues('open',event)" class="btn btn-soft" >Open</button>
+    <button onclick="filterIssues('closed',event)" class="btn btn-soft">Closed</button>
 </div>
 
 
@@ -94,8 +94,14 @@
 
 
     </div>
-
-
+<!-- 
+<div class="card space-y-6 p-4 shadow rounded bg-orange-100 h-full flex flex-col justify-between">
+                <div class="flex justify-between items-center">
+                    <img src="./images/Open-Status.png" alt="Status">
+                    <p  class="${priorityClass}  rounded-full px-6 py-1.5  font-bold uppercase text-xs">
+                        ${data.priority}
+                    </p>
+                </div> -->
 
 
     
@@ -103,10 +109,10 @@
 
 </section>
 
-
+<p class="bg-orange-200"></p>
 
 
 </main>
-    
+    <script src="./script.js"></script>
 </body>
 </html>

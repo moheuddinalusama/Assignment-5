@@ -24,14 +24,14 @@
 <body class="">
    
 <nav>
-    <div class="navbar bg-base-100 shadow-sm flex justify-between items-center ">
+    <div class="navbar  flex flex-col bg-base-100 shadow-sm md:flex-row justify-between items-center ">
  
     <div class="flex items-center gap-3" >
     <img class="w-11" src="./images/github-logo.png" alt="">
     <h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
   </div>
 
-  <div class="flex">
+  <div class=" flex mt-3 md:flex-row">
    <div class="relative w-64"> <input id="Search-input" type="text" placeholder="Search issues..." class=" pl-6 input input-bordered w-24 md:w-auto" />
 <i class="fa-brands fa-sistrix  absolute left-1 top-3 "></i>
 </div>
@@ -45,32 +45,36 @@
     <!-- button section -->
 <section class="w-10/12 mx-auto">
 <div id="filter-buttons" class="filter-buttons mt-12 mb-4 shadow p-4">
+    <h3 class="font-bold mb-4 text-xl">All Issues</h3>
      <button onclick="filterIssues('all',event)" class="btn btn-primary px-10">All</button>
     <button onclick="filterIssues('open',event)" class="btn btn-soft" >Open</button>
     <button onclick="filterIssues('closed',event)" class="btn btn-soft">Closed</button>
 </div>
 
 
-<div class=" flex justify-between items-center my-8 p-6 bg-blue-100">
-<div class="flex items-center gap-2">
+<div class=" md:flex justify-between items-center my-8 p-6 bg-blue-100">
+<div class="text-left space-y-3 md:flex items-center gap-2">
     <div class="">
         <img src="./images/Aperture.png" alt="">       
     </div>
     <div class=""><h4 id="issues" class="text-xl font-bold">0 Issues</h4>
     <p class="text-gray-500">Track and manage your project issues</p></div>
 </div>
-    <div class="flex items-center gap-3">
-        <div class="bg-green-500 rounded-full w-4 h-4"></div>
+    <div class="flex justify-end py-3 md:flex items-center gap-3">
+       <div class="Open flex items-center gap-1">
+         <div class="bg-green-500 rounded-full w-4 h-4"></div>
         <p>Open</p>
-        <div class="bg-[#A855F7] rounded-full w-4 h-4"></div>
-        <p>Closed</p>
+       </div>
+
+       <div class="Close flex items-center gap-1"> <div class="bg-[#A855F7] rounded-full w-4 h-4"></div>
+        <p>Closed</p></div>
     </div>
 </div>
 
-<div id="loading-spinner" class=" text-red-600 hidden flex justify-center my-10">
-        <span class="loading loading-infinity loading-xl"></span>
+<div id="loading-spinner" class=" text-green-600 hidden flex justify-center my-10">
+        <span class="w-13 loading loading-infinity loading-xl"></span>
     </div>
-<section id="card-container" class="grid grid-cols-4 gap-3">
+<section id="card-container" class="grid grid-cols-1 md:grid-cols-4 gap-3">
 
     
 </section>

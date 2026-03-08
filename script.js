@@ -44,7 +44,16 @@ function filterIssues(status, event) {
         displayIssues(filtered);
          
     }
-   toggleSpinner(false);
+   setTimeout(() => {
+        if (status === 'all') {
+            displayIssues(allIssues);
+        } else {
+            const filtered = allIssues.filter(item => item.status === status);
+            displayIssues(filtered);
+        }
+        toggleSpinner(false);
+    }, 200);
+
 };
 
 async function displayIssues(issues) {
